@@ -1,0 +1,14 @@
+// checkout.js
+function validateCheckout() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const address = document.getElementById('address').value;
+
+  if (!name || !email || !address) {
+    alert("Please fill out all required fields.");
+    return false;
+  }
+  alert("Thank you for your purchase!");
+  localStorage.removeItem('cart'); // Clear the cart after successful checkout
+  return true;
+}
